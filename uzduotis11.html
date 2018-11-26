@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis11</title>
+</head>
+<body>
+
+Iveskite skaiciu, kuri norite pakelti kvadratu:
+<input type="text" id="sk1">
+
+<input type="submit" onclick="handleClick()">
+<br>
+<br>
+Jusu pasirinkto skaiciaus kvadratas:
+<div id="isvedimas"></div>
+<br>
+<br>
+Iveskite staciakampio ploti:
+<input type="text" id="plotis">
+
+Iveskite staciakampio ilgi:
+<input type="text" id="ilgis">
+
+<input type="submit" onclick="staplotas()">Skaiciuoti staciakampio plota</input> <br>
+Staciakampio plotas:
+<div id="plotas"></div>
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var sk1 = document.getElementById('sk1').value;
+
+        document.getElementById("isvedimas").innerHTML = kvadratas(sk1);
+    }
+
+    function kvadratas(sk1) {
+        return sk1 * sk1;
+    }
+
+
+    function staplotas() {
+        var plotis = document.getElementById('plotis').value;
+        var ilgis = document.getElementById('ilgis').value;
+
+        document.getElementById('plotas').innerHTML = plotas (plotis, ilgis);
+    }
+
+    function plotas(plotis, ilgis) {
+        return plotis *ilgis;
+    }
+
+</script>
+
+</body>
+</html>

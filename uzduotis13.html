@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis13</title>
+</head>
+<body>
+
+Iveskite skaiciu, kuri norite pakelti kvadratu:
+<input type="text" id="sk1">
+
+<input type="submit" onclick="handleClick()" value="Kelti kvadratu">
+<br>
+<br>
+Jusu pasirinkto skaiciaus kvadratas:
+<div id="isvedimas"></div>
+<br>
+<hr>
+Iveskite staciakampio ploti:
+<input type="text" id="plotis">
+
+Iveskite staciakampio ilgi:
+<input type="text" id="ilgis">
+
+<input type="submit" onclick="staplotas()" value="Skaiciuoti plota"><br>
+Staciakampio plotas:
+<div id="plotas"></div>
+<br>
+<hr>
+
+Staciojo trikampio pirmos krastines ilgis:
+<input type="text" id="kr1">
+<br>
+<br>
+Staciojo trikampio antros krastines ilgis:
+<input type="text" id="kr2">
+<br>
+<br>
+
+<input type="submit" onclick="triplotas()" value="Skaiciuoti plota"><br>
+Trikampio plotas:
+<div id="tplotas"></div>
+<br><hr>
+
+Iveskite apskritimo, kurio plota norite suzinoti, spinduli:
+<input type="text" id="aps1">
+<br>
+<br>
+<input type="submit" onclick="apsplotas()" value="Skaiciuoti plota"><br>
+Apskritimo plotas:
+<div id="aplotas"></div>
+
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var sk1 = document.getElementById('sk1').value;
+
+        document.getElementById("isvedimas").innerHTML = kvadratas(sk1);
+    }
+
+    function kvadratas(sk1) {
+        return sk1 * sk1;
+    }
+
+
+    function staplotas() {
+        var plotis = document.getElementById('plotis').value;
+        var ilgis = document.getElementById('ilgis').value;
+
+        document.getElementById('plotas').innerHTML = plotas(plotis, ilgis);
+    }
+
+    function plotas(plotis, ilgis) {
+        return plotis * ilgis;
+    }
+
+    function triplotas() {
+        var kr1 = document.getElementById("kr1").value;
+        var kr2 = document.getElementById("kr2").value;
+
+        document.getElementById("tplotas").innerHTML = trplotas (kr1, kr2);
+    }
+
+    function trplotas (kr1, kr2) {
+        return(kr1 * kr2) / 2;
+    }
+
+    function apsplotas() {
+        var aps1 = Number(document.getElementById("aps1").value);
+
+        document.getElementById("aplotas").innerHTML = applotas (aps1);
+    }
+
+    function applotas(aps1) {
+        return (aps1*aps1)*3.1415;
+    }
+
+
+</script>
+
+</body>
+</html>

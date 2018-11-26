@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis9</title>
+</head>
+<body>
+
+Iveskite pirma skaiciu:
+<input type="text" id="sk1">
+
+Iveskite antra skaiciu:
+<input type="text" id="sk2">
+
+<br>
+<br>
+Atsakymai:
+<ul>
+    <li>Skaiciu suma:
+        <div id="suma"></div> <input type="submit" onclick="handleClick()">
+    </li>
+    <li>Skaiciu skirtumas:
+        <div id="skirtumas"></div> <input type="submit" onclick="handleClick1()">
+    </li>
+    <li>Skaiciu sandauga:
+        <div id="sandauga"></div> <input type="submit" onclick="handleClick2()">
+    </li>
+</ul>
+
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var sk1 = Number(document.getElementById('sk1').value);
+        var sk2 = Number(document.getElementById('sk2').value);
+
+        document.getElementById("suma").innerHTML = sum(sk1, sk2);
+    }
+
+    function handleClick1() {
+        var sk1 = Number(document.getElementById('sk1').value);
+        var sk2 = Number(document.getElementById('sk2').value);
+
+        document.getElementById("skirtumas").innerHTML = skir(sk1, sk2);
+    }
+
+
+    function handleClick2() {
+        var sk1 = Number(document.getElementById('sk1').value);
+        var sk2 = Number(document.getElementById('sk2').value);
+
+        document.getElementById("sandauga").innerHTML = san(sk1, sk2);
+    }
+
+    function sum(sk1, sk2) {
+        return sk1 + sk2;
+    }
+
+    function skir(sk1, sk2) {
+        return sk1 - sk2;
+    }
+
+    function san(sk1, sk2) {
+        return sk1 * sk2;
+    }
+</script>
+
+</body>
+</html>

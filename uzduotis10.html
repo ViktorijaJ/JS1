@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis10</title>
+</head>
+<body>
+
+Iveskite skaiciu, kuri norite pakelti kvadratu:
+<input type="text" id="sk1">
+
+<input type="submit" onclick="handleClick()">
+<br>
+<br>
+Atsakymas:
+<div id="isvedimas"></div>
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var sk1 = document.getElementById('sk1').value;
+
+    document.getElementById("isvedimas").innerHTML = kvadratas (sk1);
+    }
+
+    function kvadratas (sk1) {
+        return sk1*sk1;
+    }
+</script>
+
+</body>
+</html>

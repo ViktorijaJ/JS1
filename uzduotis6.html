@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis5</title>
+</head>
+<body>
+
+Iveskite savo mase:
+<input type="text" id="mase">
+
+Iveskite savo ugi:
+<input type="text" id="ugis">
+
+<input type="submit" onclick="handleClick()">
+<br>
+Jusu KMI:
+<div id="isvedimas"></div>
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var mase = document.getElementById('mase').value;
+        var ugis = document.getElementById('ugis').value;
+
+        var atsakymas = kmi (mase, ugis);
+        document.getElementById("isvedimas").innerHTML = atsakymas;
+    }
+    function kmi(ugis, mase) {
+        return mase / (ugis*ugis);
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis7</title>
+</head>
+<body>
+
+Iveskite nuvaziuotus km.:
+<input type="text" id="km">
+
+Iveskite kuro sanaudas:
+<input type="text" id="kuras">
+
+<input type="submit" onclick="handleClick()">
+<br>
+Vidutines kuro sanaudos:
+<div id="isvedimas"></div>
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var km = document.getElementById('km').value;
+        var kuras = document.getElementById('kuras').value;
+        document.getElementById("isvedimas").innerHTML = (kuras*100) / km;
+    }
+</script>
+
+</body>
+</html>

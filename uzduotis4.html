@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis4</title>
+</head>
+<body>
+
+Iveskite pirma skaiciu:
+
+<input type="text" id="ivedimas1">
+
+Iveskite antra skaiciu:
+<input type="text" id="ivedimas2">
+
+<input type="submit" onclick="handleClick()">
+<br>
+
+Skaiciu suma:
+<div id="suma"></div>
+
+Skaiciu skrtumas:
+<div id="skirtumas"></div>
+
+<script type="text/javascript" language="JavaScript">
+    function handleClick() {
+        var skaicius1 = Number(document.getElementById('ivedimas1').value);
+        var skaicius2 = Number(document.getElementById('ivedimas2').value);
+
+        suma(skaicius1, skaicius2);
+        skirt(skaicius1, skaicius2);
+
+
+        function suma() {
+            document.getElementById("suma").innerHTML = skaicius1 + skaicius2;
+        }
+
+        function skirt() {
+            document.getElementById("skirtumas").innerHTML = skaicius1 - skaicius2;
+        }
+    }
+
+</script>
+
+</body>
+</html>
